@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+```css
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&display=swap');
 
 *{
     margin:0;
@@ -11,82 +12,111 @@ html{
 }
 
 body{
-    font-family:'Poppins', sans-serif;
-    background:#e9edf2;
-    color:#222;
+    font-family:'Nunito', sans-serif;
+    background:#ECEFF1;
+    color:#1F2937;
     line-height:1.8;
 }
 
 /* ENCABEZADO */
 
 header{
-    background:linear-gradient(135deg,#0f4c81,#1a237e);
+    background:linear-gradient(135deg,#08192D,#102A4C);
     color:white;
     text-align:center;
-    padding:80px 20px;
+    padding:90px 20px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
 }
 
 header h1{
-    font-size:3rem;
-    margin-bottom:10px;
+    font-size:3.2rem;
+    font-weight:800;
+    margin-bottom:15px;
 }
 
-header p{
-    font-size:1.1rem;
-    margin:5px 0;
+.subtitle{
+    font-size:1.2rem;
+    max-width:700px;
+    margin:auto;
+    opacity:0.95;
+}
+
+.header-info{
+    margin-top:25px;
+}
+
+.header-info p{
+    margin:8px 0;
+    font-size:1.05rem;
+}
+
+/* ICONOS DEL ENCABEZADO */
+
+.icon-admin{
+    color:#4FC3F7;
+}
+
+.icon-uni{
+    color:#FFD54F;
+}
+
+.icon-location{
+    color:#EF5350;
 }
 
 /* MENÚ */
 
 nav{
-    background:#111;
-    padding:15px;
-    text-align:center;
+    background:#111827;
     position:sticky;
     top:0;
     z-index:1000;
+    text-align:center;
+    padding:15px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.15);
 }
 
 nav a{
     color:white;
     text-decoration:none;
-    margin:0 20px;
-    font-weight:500;
+    margin:0 18px;
+    font-weight:700;
     transition:.3s;
 }
 
 nav a:hover{
-    color:#90caf9;
+    color:#90CAF9;
 }
 
 /* SECCIONES */
 
 section{
-    max-width:1000px;
+    max-width:1100px;
     margin:35px auto;
-    padding:0 15px;
+    padding:0 20px;
 }
 
-/* DESPLEGABLES */
+/* ACORDEONES */
 
 details{
     margin-bottom:25px;
 }
 
 summary{
-    cursor:pointer;
-    list-style:none;
-    background:#1565c0;
+    background:#1565C0;
     color:white;
     padding:18px 25px;
     border-radius:15px;
-    font-size:1.2rem;
-    font-weight:600;
+    cursor:pointer;
+    font-size:1.15rem;
+    font-weight:700;
+    list-style:none;
     transition:.3s;
 }
 
 summary:hover{
-    background:#1976d2;
+    background:#1976D2;
+    transform:translateY(-2px);
 }
 
 summary::-webkit-details-marker{
@@ -96,57 +126,111 @@ summary::-webkit-details-marker{
 summary::after{
     content:"+";
     float:right;
-    font-size:1.4rem;
+    font-size:1.5rem;
 }
 
 details[open] summary::after{
     content:"−";
 }
 
-.section-content{
-    background:white;
-    margin-top:10px;
-    padding:25px;
-    border-radius:15px;
-    box-shadow:0 5px 15px rgba(0,0,0,.10);
-    animation:aparecer .4s ease;
+summary i{
+    margin-right:10px;
 }
 
-.section-content:hover{
-    transform:translateY(-3px);
+/* CONTENIDO */
+
+.section-content{
+    background:white;
+    padding:25px;
+    margin-top:10px;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,0.08);
+    animation:fadeIn .4s ease;
+}
+
+/* CURSOS */
+
+.course-card{
+    background:#F8FAFC;
+    border-left:6px solid #1565C0;
+    padding:18px;
+    margin-bottom:18px;
+    border-radius:10px;
     transition:.3s;
 }
+
+.course-card:hover{
+    transform:translateY(-4px);
+    box-shadow:0 8px 20px rgba(0,0,0,0.12);
+}
+
+.course-card h3{
+    color:#0D47A1;
+    margin-bottom:8px;
+}
+
+/* LISTAS */
 
 ul{
     padding-left:20px;
 }
 
 li{
-    margin-bottom:10px;
+    margin-bottom:12px;
 }
 
+/* ENLACES */
+
 a{
-    color:#1565c0;
+    color:#1565C0;
     text-decoration:none;
+    font-weight:600;
 }
 
 a:hover{
     text-decoration:underline;
 }
 
-/* PIE DE PÁGINA */
+/* CONTACTO */
+
+.fa-envelope{
+    color:#EA4335;
+}
+
+.fa-linkedin{
+    color:#0A66C2;
+}
+
+.fa-github{
+    color:#171515;
+}
+
+.fa-chart-line{
+    color:#2E7D32;
+}
+
+.fa-users{
+    color:#7B1FA2;
+}
+
+.fa-book{
+    color:#FB8C00;
+}
+
+/* FOOTER */
 
 footer{
-    background:#111;
+    background:#08192D;
     color:white;
     text-align:center;
-    padding:20px;
+    padding:25px;
     margin-top:40px;
 }
 
 /* ANIMACIÓN */
 
-@keyframes aparecer{
+@keyframes fadeIn{
+
     from{
         opacity:0;
         transform:translateY(-10px);
@@ -156,14 +240,19 @@ footer{
         opacity:1;
         transform:translateY(0);
     }
+
 }
 
-/* CELULAR */
+/* RESPONSIVE */
 
 @media(max-width:768px){
 
     header h1{
-        font-size:2rem;
+        font-size:2.2rem;
+    }
+
+    .subtitle{
+        font-size:1rem;
     }
 
     nav a{
@@ -174,4 +263,6 @@ footer{
     .section-content{
         padding:20px;
     }
+
 }
+```
