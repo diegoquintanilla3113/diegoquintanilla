@@ -1,47 +1,66 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alvaro Diego Quintanilla Ramos</title>
+    <title>Álvaro Diego Quintanilla Ramos</title>
 
     <link rel="stylesheet" href="style.css">
 
     <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
 <header>
-    <h1>Alvaro Diego Quintanilla Ramos</h1>
 
-    <p>
-        <i class="fas fa-briefcase"></i>
-        Estudiante de Administración de Empresas
+    <h1>Álvaro Diego Quintanilla Ramos</h1>
+
+    <p class="subtitle">
+        Estudiante de Administración de Empresas con interés en Finanzas y análisis estratégico.
     </p>
 
-    <p>
-        <i class="fas fa-graduation-cap"></i>
-        Universidad Católica San Pablo
-    </p>
+    <div class="header-info">
 
-    <p>
-        <i class="fas fa-location-dot"></i>
-        Arequipa, Perú
-    </p>
+        <p>
+            <i class="fas fa-briefcase icon-admin"></i>
+            Administración de Empresas
+        </p>
+
+        <p>
+            <i class="fas fa-graduation-cap icon-uni"></i>
+            Universidad Católica San Pablo
+        </p>
+
+        <p>
+            <i class="fas fa-location-dot icon-location"></i>
+            Arequipa, Perú
+        </p>
+
+    </div>
+
 </header>
 
 <nav>
     <a href="#sobre-mi">Sobre mí</a>
+    <a href="#formacion">Formación</a>
     <a href="#cursos">Cursos</a>
+    <a href="#enlaces">Enlaces</a>
+    <a href="#companeros">Compañeros</a>
+    <a href="#intereses">Intereses</a>
     <a href="#contacto">Contacto</a>
 </nav>
 
 <section id="sobre-mi">
 
     <details>
+
         <summary>
             <i class="fas fa-user"></i>
             Sobre mí
@@ -50,25 +69,59 @@
         <div class="section-content">
 
             <p>
-                Soy estudiante de Administración de Empresas en la Universidad Católica San Pablo (UCSP), en Arequipa, Perú.
+                Soy estudiante de Administración de Empresas en la Universidad Católica San Pablo (UCSP), en la ciudad de Arequipa, Perú. Me interesa comprender el funcionamiento de las organizaciones y cómo una gestión eficiente contribuye al crecimiento sostenible de las empresas.
             </p>
 
-            <p>
-                Mi principal interés académico se encuentra en el área de las finanzas. Tengo el propósito de especializarme en finanzas y desarrollar competencias relacionadas con el análisis financiero, la gestión de inversiones y la evaluación de proyectos.
-            </p>
+            <br>
 
             <p>
-                Me considero una persona responsable, analítica y comprometida con el aprendizaje continuo.
+                Mi principal interés académico se encuentra en el área de las finanzas. Me motiva entender cómo las decisiones financieras influyen en el desempeño de una organización y cómo una adecuada planificación contribuye al logro de objetivos estratégicos.
             </p>
 
+            <br>
+
             <p>
-                Universidad:
+                Tengo el propósito de especializarme en finanzas y desarrollar competencias relacionadas con el análisis financiero, la gestión de inversiones y la evaluación de proyectos.
+            </p>
+
+        </div>
+
+    </details>
+
+</section>
+
+<section id="formacion">
+
+    <details>
+
+        <summary>
+            <i class="fas fa-graduation-cap"></i>
+            Formación Académica
+        </summary>
+
+        <div class="section-content">
+
+            <p>
+                <strong>Universidad:</strong>
                 <a href="https://ucsp.edu.pe/" target="_blank">
                     Universidad Católica San Pablo
                 </a>
             </p>
 
+            <br>
+
+            <p>
+                <strong>Carrera:</strong> Administración de Empresas
+            </p>
+
+            <br>
+
+            <p>
+                <strong>Ubicación:</strong> Arequipa, Perú
+            </p>
+
         </div>
+
     </details>
 
 </section>
@@ -76,19 +129,143 @@
 <section id="cursos">
 
     <details>
+
         <summary>
             <i class="fas fa-book"></i>
-            Cursos Actuales
+            Cursos y Profesores
+        </summary>
+
+        <div class="section-content">
+
+            <div class="course-card">
+                <h3>Economía General</h3>
+                <p>
+                    Profesor:
+                    <a href="https://www.linkedin.com/in/jhony-vel%C3%A1squez-delgado-112b8019/" target="_blank">
+                        Jhony Velásquez Delgado
+                    </a>
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Historia de Occidente I</h3>
+                <p>
+                    Profesora:
+                    <a href="https://www.linkedin.com/in/amparo-isela-chalco-ch%C3%A1vez-8185512aa/" target="_blank">
+                        Amparo Isela Chalco Chávez
+                    </a>
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Comunicación II</h3>
+                <p>
+                    Profesora:
+                    <a href="https://www.linkedin.com/in/lizet-valencia-98b998111/" target="_blank">
+                        Lizet del Carmen Valencia Guillén
+                    </a>
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Filosofía de la Naturaleza</h3>
+                <p>
+                    Profesor:
+                    <a href="https://www.linkedin.com/in/david-matto-neyra-2773a73a7/" target="_blank">
+                        David Matto Neyra
+                    </a>
+                </p>
+            </div>
+
+            <div class="course-card">
+                <h3>Introducción a la Computación</h3>
+                <p>
+                    Profesor:
+                    <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank">
+                        Ernesto Cuadros Vargas
+                    </a>
+                </p>
+            </div>
+
+        </div>
+
+    </details>
+
+</section>
+
+<section id="enlaces">
+
+    <details>
+
+        <summary>
+            <i class="fas fa-link"></i>
+            Mis Enlaces
+        </summary>
+
+        <div class="section-content">
+
+            <p>🐙 <a href="https://github.com/diegoquintanilla3113" target="_blank">GitHub</a></p>
+
+            <p>📁 <a href="https://github.com/diegoquintanilla3113/diegoquintanilla" target="_blank">Repositorio</a></p>
+
+            <p>💼 <a href="https://www.linkedin.com/in/alvaro-diego-quintanilla-ramos-85124b419" target="_blank">LinkedIn</a></p>
+
+            <p>🌐 <a href="https://diegoquintanilla3113.github.io/diegoquintanilla/" target="_blank">Página Web</a></p>
+
+        </div>
+
+    </details>
+
+</section>
+
+<section id="companeros">
+
+    <details>
+
+        <summary>
+            <i class="fas fa-users"></i>
+            Compañeros
         </summary>
 
         <div class="section-content">
 
             <ul>
-                <li>Economía General</li>
-                <li>Historia de Occidente I</li>
-                <li>Comunicación II</li>
-                <li>Filosofía de la Naturaleza</li>
-                <li>Introducción a la Computación</li>
+
+                <li><a href="https://flavio-hc.github.io/pagina-personal/" target="_blank">Flavio Alessandro Yazid Hancco Chaiña</a></li>
+
+                <li><a href="https://lorian0x.github.io/" target="_blank">Fabrizio Alessandro Ocsa Sanchez</a></li>
+
+                <li><a href="https://w4nd4r1.github.io/Ariana-Yasmin-Delgado-Arce/" target="_blank">Ariana Yasmín Delgado Arce</a></li>
+
+                <li><a href="https://aaronhumpiri.github.io/" target="_blank">Aaron Humpiri Obregon</a></li>
+
+                <li><a href="https://kenya-sq.github.io/Kenya-Shupingahua-Quiroz/" target="_blank">Kenya Magdiel Shupingahua Quiroz</a></li>
+
+            </ul>
+
+        </div>
+
+    </details>
+
+</section>
+
+<section id="intereses">
+
+    <details>
+
+        <summary>
+            <i class="fas fa-chart-line"></i>
+            Intereses Académicos
+        </summary>
+
+        <div class="section-content">
+
+            <ul>
+                <li>Finanzas</li>
+                <li>Mercados Financieros</li>
+                <li>Inversiones</li>
+                <li>Análisis Financiero</li>
+                <li>Gestión Empresarial</li>
             </ul>
 
         </div>
@@ -100,6 +277,7 @@
 <section id="contacto">
 
     <details>
+
         <summary>
             <i class="fas fa-envelope"></i>
             Contacto
@@ -108,8 +286,15 @@
         <div class="section-content">
 
             <p>
-                <a href="mailto:alvaro.quintanilla@ucsp.edu.pe">
-                    alvaro.quintanilla@ucsp.edu.pe
+                <i class="fas fa-envelope"></i>
+                alvaro.quintanilla@ucsp.edu.pe
+            </p>
+
+            <br>
+
+            <p>
+                <a href="https://www.linkedin.com/in/alvaro-diego-quintanilla-ramos-85124b419" target="_blank">
+                    LinkedIn
                 </a>
             </p>
 
@@ -120,7 +305,8 @@
 </section>
 
 <footer>
-    <p>© 2026 Alvaro Diego Quintanilla Ramos</p>
+    <p>© 2026 Álvaro Diego Quintanilla Ramos</p>
+    <p>Administración de Empresas - UCSP</p>
 </footer>
 
 </body>
