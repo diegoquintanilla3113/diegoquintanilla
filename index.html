@@ -1,111 +1,177 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Álvaro Diego Quintanilla Ramos</title>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
-    <link rel="stylesheet" href="style.css">
-</head>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
 
-<body>
+html{
+    scroll-behavior:smooth;
+}
 
-<header>
-    <h1>Álvaro Diego Quintanilla Ramos</h1>
-    <p>Estudiante de Administración de Empresas</p>
-    <p>Universidad Católica San Pablo</p>
-    <p>Arequipa, Perú</p>
-</header>
+body{
+    font-family:'Poppins', sans-serif;
+    background:#e9edf2;
+    color:#222;
+    line-height:1.8;
+}
 
-<nav>
-    <a href="#sobre-mi">Sobre mí</a>
-    <a href="#cursos">Cursos</a>
-    <a href="#contacto">Contacto</a>
-</nav>
+/* ENCABEZADO */
 
-<section id="sobre-mi">
+header{
+    background:linear-gradient(135deg,#0f4c81,#1a237e);
+    color:white;
+    text-align:center;
+    padding:80px 20px;
+}
 
-    <details>
-        <summary>Sobre mí</summary>
+header h1{
+    font-size:3rem;
+    margin-bottom:10px;
+}
 
-        <div class="section-content">
+header p{
+    font-size:1.1rem;
+    margin:5px 0;
+}
 
-            <p>
-                Soy estudiante de Administración de Empresas en la Universidad Católica San Pablo (UCSP), en la ciudad de Arequipa, Perú. Me interesa comprender el funcionamiento de las organizaciones y cómo una gestión eficiente contribuye al crecimiento sostenible de las empresas.
-            </p>
+/* MENÚ */
 
-            <p>
-                Mi principal interés académico se encuentra en el área de las finanzas. Me motiva entender cómo las decisiones financieras influyen en el desempeño de una organización y cómo una adecuada planificación puede contribuir a alcanzar objetivos a corto y largo plazo.
-            </p>
+nav{
+    background:#111;
+    padding:15px;
+    text-align:center;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
 
-            <p>
-                Tengo el propósito de especializarme en finanzas y desarrollar competencias relacionadas con el análisis financiero, la gestión de inversiones y la evaluación de proyectos.
-            </p>
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 20px;
+    font-weight:500;
+    transition:.3s;
+}
 
-            <p>
-                Me considero una persona responsable, analítica y comprometida con el aprendizaje continuo. Mi objetivo es convertirme en un profesional capaz de aportar soluciones estratégicas y generar valor en las organizaciones mediante una sólida formación en administración y finanzas.
-            </p>
+nav a:hover{
+    color:#90caf9;
+}
 
-            <p>
-                Universidad:
-                <a href="https://ucsp.edu.pe/" target="_blank">
-                    Universidad Católica San Pablo
-                </a>
-            </p>
+/* SECCIONES */
 
-        </div>
+section{
+    max-width:1000px;
+    margin:35px auto;
+    padding:0 15px;
+}
 
-    </details>
+/* DESPLEGABLES */
 
-</section>
+details{
+    margin-bottom:25px;
+}
 
-<section id="cursos">
+summary{
+    cursor:pointer;
+    list-style:none;
+    background:#1565c0;
+    color:white;
+    padding:18px 25px;
+    border-radius:15px;
+    font-size:1.2rem;
+    font-weight:600;
+    transition:.3s;
+}
 
-    <details>
+summary:hover{
+    background:#1976d2;
+}
 
-        <summary>Cursos Actuales</summary>
+summary::-webkit-details-marker{
+    display:none;
+}
 
-        <div class="section-content">
+summary::after{
+    content:"+";
+    float:right;
+    font-size:1.4rem;
+}
 
-            <ul>
-                <li>Economía General</li>
-                <li>Historia de Occidente I</li>
-                <li>Comunicación II</li>
-                <li>Filosofía de la Naturaleza</li>
-                <li>Introducción a la Computación</li>
-            </ul>
+details[open] summary::after{
+    content:"−";
+}
 
-        </div>
+.section-content{
+    background:white;
+    margin-top:10px;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.10);
+    animation:aparecer .4s ease;
+}
 
-    </details>
+.section-content:hover{
+    transform:translateY(-3px);
+    transition:.3s;
+}
 
-</section>
+ul{
+    padding-left:20px;
+}
 
-<section id="contacto">
+li{
+    margin-bottom:10px;
+}
 
-    <details>
+a{
+    color:#1565c0;
+    text-decoration:none;
+}
 
-        <summary>Contacto</summary>
+a:hover{
+    text-decoration:underline;
+}
 
-        <div class="section-content">
+/* PIE DE PÁGINA */
 
-            <p>
-                Correo institucional:
-                <a href="mailto:alvaro.quintanilla@ucsp.edu.pe">
-                    alvaro.quintanilla@ucsp.edu.pe
-                </a>
-            </p>
+footer{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
 
-        </div>
+/* ANIMACIÓN */
 
-    </details>
+@keyframes aparecer{
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
 
-</section>
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
 
-<footer>
-    <p>© 2026 Álvaro Diego Quintanilla Ramos</p>
-</footer>
+/* CELULAR */
 
-</body>
-</html>
-```
+@media(max-width:768px){
+
+    header h1{
+        font-size:2rem;
+    }
+
+    nav a{
+        display:block;
+        margin:10px 0;
+    }
+
+    .section-content{
+        padding:20px;
+    }
+}
